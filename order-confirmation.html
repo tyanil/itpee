@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - SoleStyle</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Order confirmation specific styles */
+        .confirmation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .confirmation-icon {
+            color: #4CAF50;
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .confirmation-message {
+            margin-bottom: 30px;
+        }
+        
+        .confirmation-message h1 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        .order-details {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        
+        .detail-row strong {
+            color: #333;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .action-buttons a {
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .continue-shopping {
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .continue-shopping:hover {
+            background: #e0e0e0;
+        }
+        
+        .view-order {
+            background: #333;
+            color: white;
+        }
+        
+        .view-order:hover {
+            background: #222;
+        }
+        
+        .payment-note {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff8e1;
+            border-left: 4px solid #ffb300;
+            text-align: left;
+        }
+        
+        .order-summary {
+            margin-top: 30px;
+        }
+        
+        .product-list {
+            margin-bottom: 20px;
+        }
+        
+        .product-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .product-image {
+            width: 80px;
+            height: 80px;
+            background-color: #f0f0f0;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-details {
+            flex-grow: 1;
+        }
+        
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .product-variant {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            width: 100px;
+            text-align: right;
+        }
+        
+        .totals {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+        
+        .tracking-info {
+            margin-top: 30px;
+            padding: 15px;
+            background: #e8f4fd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .tracking-info p {
+            margin-bottom: 10px;
+        }
+        
+        .tracking-number {
+            font-weight: bold;
+            color: #0066cc;
+            padding: 5px 10px;
+            background: #d9eafd;
+            border-radius: 3px;
+        }
+        
+        .delivery-estimate {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>SoleStyle</h1>
+            <p>Walk in Comfort, Step in Style</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="kids.html">Kids</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="about.html">About us</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart (0)</a>
+        </div>
+    </header>
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > <a href="cart.html">Shopping Cart</a> > <a href="checkout.html">Checkout</a> > Order Confirmation
+        </div>
+        
+        <div class="confirmation-container">
+            <div class="confirmation-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            
+            <div class="confirmation-message">
+                <h1>Thank You for Your Order!</h1>
+                <p>Your order has been successfully placed. A confirmation email has been sent to <strong>customer@example.com</strong>.</p>
+            </div>
+            
+            <div class="order-details">
+                <h2>Order Details</h2>
+                <div class="detail-row">
+                    <span><strong>Order Number:</strong></span>
+                    <span>#SL-20250408-1234</span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Order Date:</strong></span>
+                    <span>April 8, 2025</span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Payment Method:</strong></span>
+                    <span>Credit Card (Visa ending in 1234)</span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Shipping Method:</strong></span>
+                    <span>Standard Shipping (3-5 business days)</span>
+                </div>
+            </div>
+            
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="img/c.jpg" alt="Running shoes">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-name">Ultra Boost Running Shoes</div>
+                            <div class="product-variant">Size: 10 | Color: Black</div>
+                        </div>
+                        <div class="product-price">$129.99</div>
+                    </div>
+                    
+                
+                <div class="totals">
+                    <div class="detail-row">
+                        <span>Subtotal:</span>
+                        <span>$154.98</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Shipping:</span>
+                        <span>$8.99</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Tax:</span>
+                        <span>$12.32</span>
+                    </div>
+                    <div class="detail-row">
+                        <span><strong>Total:</strong></span>
+                        <span><strong>$176.29</strong></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tracking-info">
+                <p>Your order is being processed and will ship soon.</p>
+                <p>Tracking Number: <span class="tracking-number">Not available yet</span></p>
+                <p class="delivery-estimate">Estimated delivery: April 11-13, 2025</p>
+            </div>
+            
+            <div class="payment-note">
+                <p><strong>Note:</strong> Your payment has been successfully processed. The charge will appear on your statement as "SoleStyle Inc."</p>
+            </div>
+            
+            <div class="shipping-address">
+                <h3>Shipping Address</h3>
+                <p>
+                    John Doe<br>
+                    123 Main Street<br>
+                    Apt 4B<br>
+                    New York, NY 10001<br>
+                    United States<br>
+                    Phone: (555) 123-4567
+                </p>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="index.html" class="continue-shopping">Continue Shopping</a>
+                
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SoleStyle</h3>
+                <p>We provide premium footwear for all your needs, combining comfort, style, and durability.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="track-order.html">Track Your Order</a></li>
+                    <li><a href="returns.html">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Pinterest</a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to our newsletter</h4>
+                    <form>
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SoleStyle. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

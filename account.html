@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - SoleStyle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>SoleStyle</h1>
+            <p>Walk in Comfort, Step in Style</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="kids.html">Kids</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="about.html" class="active">About us</a>
+            <a href="cart.html">Cart (0)</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="account-header">
+            <h2>My Account</h2>
+            <p>Manage your account, orders, and preferences</p>
+        </section>
+
+        <section class="account-container">
+            <div class="account-sidebar">
+                <ul>
+                    <li class="active"><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#orders">Order History</a></li>
+                    <li><a href="#addresses">Addresses</a></li>
+                    <li><a href="#payment-methods">Payment Methods</a></li>
+                    <li><a href="#account-details">Account Details</a></li>
+                    <li><a href="#password">Change Password</a></li>
+                    <li><a href="#notifications">Notification Preferences</a></li>
+                    <li><a href="#logout">Logout</a></li>
+                </ul>
+            </div>
+
+            <div class="account-content">
+                <div id="dashboard" class="account-section active">
+                    <h3>Dashboard</h3>
+                    <div class="dashboard-welcome">
+                        <p>Hello, <span class="user-name">Alex</span>! (Not Alex? <a href="#logout">Logout</a>)</p>
+                        <p>From your account dashboard you can view your recent orders, manage your shipping and billing addresses, edit your password and account details.</p>
+                    </div>
+                    
+                    <div class="dashboard-summary">
+                        <div class="summary-box">
+                            <h4>Orders</h4>
+                            <p class="count">5</p>
+                            <a href="#orders">View All</a>
+                        </div>
+                        <div class="summary-box">
+                            <h4>Wishlist Items</h4>
+                            <p class="count">12</p>
+                            <a href="wishlist.html">View Wishlist</a>
+                        </div>
+                        <div class="summary-box">
+                            <h4>SoleStyle Rewards</h4>
+                            <p class="count">250 pts</p>
+                            <a href="#rewards">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="recent-orders">
+                        <h4>Recent Orders</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Total</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-2025-7829</td>
+                                    <td>April 2, 2025</td>
+                                    <td>Shipping</td>
+                                    <td>$179.99</td>
+                                    <td><a href="#order-details">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-2025-6453</td>
+                                    <td>March 15, 2025</td>
+                                    <td>Delivered</td>
+                                    <td>$239.98</td>
+                                    <td><a href="#order-details">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-2025-5321</td>
+                                    <td>February 28, 2025</td>
+                                    <td>Delivered</td>
+                                    <td>$129.99</td>
+                                    <td><a href="#order-details">View</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="orders" class="account-section">
+                    <h3>Order History</h3>
+                    <!-- This would expand on the orders section -->
+                </div>
+                
+                <div id="addresses" class="account-section">
+                    <h3>Addresses</h3>
+                    <div class="address-container">
+                        <div class="address-box">
+                            <h4>Shipping Address</h4>
+                            <address>
+                                Alex Johnson<br>
+                                123 Main Street<br>
+                                Apt 4B<br>
+                                New York, NY 10001<br>
+                                United States<br>
+                                Phone: (212) 555-1234
+                            </address>
+                            <div class="address-actions">
+                                <a href="#edit-shipping">Edit</a>
+                                <a href="#delete-shipping">Delete</a>
+                            </div>
+                        </div>
+                        
+                        <div class="address-box">
+                            <h4>Billing Address</h4>
+                            <address>
+                                Alex Johnson<br>
+                                123 Main Street<br>
+                                Apt 4B<br>
+                                New York, NY 10001<br>
+                                United States<br>
+                                Phone: (212) 555-1234
+                            </address>
+                            <div class="address-actions">
+                                <a href="#edit-billing">Edit</a>
+                                <a href="#delete-billing">Delete</a>
+                            </div>
+                        </div>
+                        
+                        <div class="address-box add-address">
+                            <h4>Add New Address</h4>
+                            <p>Add a new shipping or billing address</p>
+                            <a href="#add-address" class="btn">Add New Address</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="payment-methods" class="account-section">
+                    <h3>Payment Methods</h3>
+                    <!-- Payment methods content -->
+                </div>
+                
+                <div id="account-details" class="account-section">
+                    <h3>Account Details</h3>
+                    <form class="account-form">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" value="Alex">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" value="Johnson">
+                        </div>
+                        <div class="form-group">
+                            <label for="display-name">Display Name</label>
+                            <input type="text" id="display-name" value="Alex J">
+                            <span class="form-hint">This will be how your name appears in the account section and in reviews</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" value="alex.johnson@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" value="(212) 555-1234">
+                        </div>
+                        <div class="form-group">
+                            <label for="birth-date">Date of Birth</label>
+                            <input type="date" id="birth-date" value="1990-05-15">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="password" class="account-section">
+                    <h3>Change Password</h3>
+                    <form class="password-form">
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn">Change Password</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="notifications" class="account-section">
+                    <h3>Notification Preferences</h3>
+                    <!-- Notification preferences content -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="men.html">Men's Shoes</a></li>
+                    <li><a href="women.html">Women's Shoes</a></li>
+                    <li><a href="kids.html">Kids' Shoes</a></li>
+                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="shipping.html">Shipping Policy</a></li>
+                    <li><a href="returns.html">Returns & Exchanges</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/ninaysabelle.delossantos">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SoleStyle. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src=""></script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SoleStyle</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Checkout page specific styles */
+        .checkout-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .checkout-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .checkout-form {
+            flex: 3;
+            min-width: 300px;
+        }
+        
+        .order-summary-container {
+            flex: 2;
+            min-width: 300px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            align-self: flex-start;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .form-section:last-child {
+            border-bottom: none;
+        }
+        
+        .form-section h2 {
+            margin-bottom: 20px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .form-group {
+            flex: 1;
+            min-width: 200px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group input.invalid, 
+        .form-group select.invalid {
+            border-color: #ff6b6b;
+        }
+        
+        .error-message {
+            color: #ff6b6b;
+            font-size: 12px;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        .summary-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            gap: 10px;
+        }
+        
+        .item-details {
+            flex: 1;
+        }
+        
+        .item-details h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+        
+        .item-details p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .item-price {
+            font-weight: bold;
+        }
+        
+        .order-totals {
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+        
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .grand-total {
+            font-weight: bold;
+            font-size: 18px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .payment-method {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-method input[type="radio"] {
+            margin: 0;
+        }
+        
+        .payment-method:hover {
+            border-color: #888;
+        }
+        
+        .payment-method.selected {
+            border-color: #4CAF50;
+            background-color: #f0fff0;
+        }
+        
+        .payment-fields {
+            margin-top: 20px;
+        }
+        
+        .card-fields, .cod-fields {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .place-order-btn {
+            width: 100%;
+            padding: 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .place-order-btn:hover {
+            background: #45a049;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .checkout-content {
+                flex-direction: column;
+            }
+            
+            .order-summary-container {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>SoleStyle</h1>
+            <p>Walk in Comfort, Step in Style</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="kids.html">Kids</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="about.html">About us</a>
+            <a href="cart.html">Cart (0)</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > <a href="cart.html">Shopping Cart</a> > Checkout
+        </div>
+
+        <section class="checkout-container">
+            <h1>Checkout</h1>
+            
+            <div class="checkout-content">
+                <div class="checkout-form">
+                    <form id="checkout-form">
+                        <div class="form-section">
+                            <h2>Contact Information</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name *</label>
+                                    <input type="text" id="first-name" name="first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name *</label>
+                                    <input type="text" id="last-name" name="last-name" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h2>Shipping Address</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="address">Street Address *</label>
+                                    <input type="text" id="address" name="address" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State/Province *</label>
+                                    <input type="text" id="state" name="state" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="zip">ZIP/Postal Code *</label>
+                                    <input type="text" id="zip" name="zip" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country *</label>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="USA">United States</option>
+                                        <option value="CAN">Canada</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="AUS">Australia</option>
+                                        <!-- Add more countries as needed -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="shipping-notes">Delivery Instructions (Optional)</label>
+                                    <textarea id="shipping-notes" name="shipping-notes" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h2>Payment Method</h2>
+                            <div class="payment-methods">
+                                <label class="payment-method">
+                                    <input type="radio" name="payment-method" value="credit-card" checked>
+                                    <span>Credit Card</span>
+                                </label>
+                                <label class="payment-method">
+                                    <input type="radio" name="payment-method" value="cod">
+                                    <span>Cash on Delivery (COD)</span>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-fields">
+                                <div class="card-fields">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-name">Name on Card *</label>
+                                            <input type="text" id="card-name" name="card-name">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-number">Card Number *</label>
+                                            <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" oninput="formatCardNumber(event)">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expiry-date">Expiry Date *</label>
+                                            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV *</label>
+                                            <input type="text" id="cvv" name="cvv" maxlength="4">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="cod-fields">
+                                    <p><strong>Cash on Delivery Details:</strong></p>
+                                    <ul>
+                                        <li>Pay in cash when your order is delivered</li>
+                                        <li>Please have the exact amount ready to ensure a smooth delivery</li>
+                                        <li>A small COD handling fee may apply in some areas</li>
+                                    </ul>
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox" name="cod-agreement" required>
+                                            I agree to pay in cash upon delivery
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <button type="submit" class="place-order-btn">Place Order</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="order-summary-container">
+                    <h2>Order Summary</h2>
+                    <div id="order-summary">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="men.html">Men's Shoes</a></li>
+                    <li><a href="women.html">Women's Shoes</a></li>
+                    <li><a href="kids.html">Kids' Shoes</a></li>
+                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="shipping.html">Shipping Policy</a></li>
+                    <li><a href="returns.html">Returns & Exchanges</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SoleStyle. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-Terrain Hiking Boots - SoleStyle</title>
+    <link rel="stylesheet" href="pdac.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>SoleStyle</h1>
+            <p>Walk in Comfort, Step in Style</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="kids.html">Kids</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="about.html">About us</a>
+            <a href="cart.html">Cart (0)</a>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > <a href="sports.html">Sports Shoes</a> > All-Terrain Hiking Boots
+        </div>
+
+        <section class="product-details">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="img/h.jpg" alt="All-Terrain Hiking Boots" id="main-product-image">
+                </div>
+                <div class="thumbnail-gallery">
+
+                </div>
+            <div class="product-info">
+                <h1>All-Terrain Hiking Boots</h1>
+                <div class="product-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-count">(32 reviews)</span>
+                </div>
+                <p class="product-price">$179.99</p>
+                <p class="product-availability">In Stock</p>
+
+                <div class="product-description">
+                    <h2>Description</h2>
+                    <p>Our All-Terrain Hiking Boots are designed for the serious outdoor enthusiast. Built with durable waterproof materials and featuring advanced cushioning technology, these boots provide exceptional support and comfort for all your adventures.</p>
+                    <p>The rugged outsole offers superior traction on varied terrain, while the breathable membrane keeps your feet dry in all weather conditions. Perfect for hiking, backpacking, and all your outdoor pursuits.</p>
+                </div>
+
+                <div class="product-features">
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Waterproof full-grain leather upper</li>
+                        <li>Breathable Gore-Tex® membrane</li>
+                        <li>Vibram® rubber outsole for exceptional grip</li>
+                        <li>EVA midsole for all-day comfort</li>
+                        <li>Reinforced toe cap for added protection</li>
+                        <li>Padded collar and tongue</li>
+                        <li>Removable OrthoLite® footbed</li>
+                        <li>Weight: 1 lb 12 oz (per boot)</li>
+                    </ul>
+                </div>
+
+                <div class="product-options">
+                    <div class="size-selection">
+                        <label for="size">Size:</label>
+                        <select id="size" name="size">
+                            <option value="">Select Size</option>
+                            <option value="7">US 7</option>
+                            <option value="7.5">US 7.5</option>
+                            <option value="8">US 8</option>
+                            <option value="8.5">US 8.5</option>
+                            <option value="9">US 9</option>
+                            <option value="9.5">US 9.5</option>
+                            <option value="10">US 10</option>
+                            <option value="10.5">US 10.5</option>
+                            <option value="11">US 11</option>
+                            <option value="11.5">US 11.5</option>
+                            <option value="12">US 12</option>
+                            <option value="13">US 13</option>
+                        </select>
+                        <a href="size-guide.html" class="size-guide-link">Size Guide</a>
+                    </div>
+
+                    <div class="color-selection">
+                        <label for="color">Color:</label>
+                        <div class="color-options">
+                            <div class="color-option active" style="background-color: #524741;" data-color="Brown"></div>
+                            <div class="color-option" style="background-color: #000000;" data-color="Black"></div>
+                            <div class="color-option" style="background-color: #394752;" data-color="Navy"></div>
+                        </div>
+                        <span id="selected-color">Brown</span>
+                    </div>
+
+                    <div class="quantity-selection">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="decrementQuantity()">-</button>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                            <button class="quantity-btn plus" onclick="incrementQuantity()">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <button
+                        type="button"
+                        class="add-to-cart-btn"
+                        data-product-id="4"
+                        data-product-name="All-Terrain Hiking Boots"
+                        data-product-price="179.99"
+                        data-product-image="img/h.jpg"
+                    >
+                        Add to Cart
+                    </button>
+                    <button class="add-to-wishlist-btn">Add to Wishlist</button>
+                </div>
+
+                <div class="shipping-info">
+                    <p><strong>Free shipping</strong> on orders over $100</p>
+                    <p><strong>Free returns</strong> within 30 days</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-tabs">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab('details')">Details</button>
+                <button class="tab-btn" onclick="openTab('specifications')">Specifications</button>
+                <button class="tab-btn" onclick="openTab('reviews')">Reviews (32)</button>
+            </div>
+
+            <div id="details" class="tab-content active">
+                <h2>Product Details</h2>
+                <p>The All-Terrain Hiking Boots are designed to provide maximum comfort and protection for hikers and outdoor enthusiasts. The boots feature a waterproof full-grain leather upper that keeps your feet dry in wet conditions, while the breathable Gore-Tex® membrane allows moisture to escape, keeping your feet comfortable during intense activities.</p>
+                <p>The Vibram® rubber outsole provides exceptional traction on various terrains, from muddy trails to rocky paths. The boots also feature a protective rubber toe cap that shields your feet from rocks and roots along the trail.</p>
+                <p>For comfort, the boots include an EVA midsole that absorbs shock and provides cushioning, and a removable OrthoLite® footbed that offers additional underfoot support. The padded collar and tongue protect your ankles from friction and pressure points.</p>
+                <h3>Care Instructions</h3>
+                <ul>
+                    <li>Clean dirt off with a soft brush</li>
+                    <li>Apply leather conditioner regularly to maintain water resistance</li>
+                    <li>Allow boots to dry naturally away from direct heat</li>
+                    <li>Store in a cool, dry place</li>
+                </ul>
+            </div>
+
+            <div id="specifications" class="tab-content">
+                <h2>Technical Specifications</h2>
+                <table class="specs-table">
+                    <tr>
+                        <th>Material</th>
+                        <td>Full-grain waterproof leather, synthetic mesh</td>
+                    </tr>
+                    <tr>
+                        <th>Waterproofing</th>
+                        <td>Gore-Tex® waterproof membrane</td>
+                    </tr>
+                    <tr>
+                        <th>Outsole</th>
+                        <td>Vibram® Megagrip rubber compound</td>
+                    </tr>
+                    <tr>
+                        <th>Midsole</th>
+                        <td>Compression-molded EVA</td>
+                    </tr>
+                    <tr>
+                        <th>Lining</th>
+                        <td>Moisture-wicking textile</td>
+                    </tr>
+                    <tr>
+                        <th>Footbed</th>
+                        <td>Removable OrthoLite®</td>
+                    </tr>
+                    <tr>
+                        <th>Lacing System</th>
+                        <td>Traditional lace with metal hardware</td>
+                    </tr>
+                    <tr>
+                        <th>Shaft Height</th>
+                        <td>Mid-cut (6 inches)</td>
+                    </tr>
+                    <tr>
+                        <th>Weight</th>
+                        <td>1 lb 12 oz per boot (size 9)</td>
+                    </tr>
+                    <tr>
+                        <th>Best For</th>
+                        <td>Hiking, backpacking, trail walking</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="reviews" class="tab-content">
+                <h2>Customer Reviews</h2>
+                <div class="review-summary">
+                    <div class="average-rating">
+                        <span class="large-rating">4.8</span>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <p>Based on 32 reviews</p>
+                        </div>
+                    </div>
+                    <div class="rating-breakdown">
+                        <div class="rating-bar">
+                            <span>5 Stars</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 80%;"></div>
+                            </div>
+                            <span>26</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4 Stars</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 15%;"></div>
+                            </div>
+                            <span>5</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3 Stars</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 3%;"></div>
+                            </div>
+                            <span>1</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2 Stars</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0;"></div>
+                            </div>
+                            <span>0</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1 Star</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 0;"></div>
+                            </div>
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="write-review">
+                    <button class="write-review-btn">Write a Review</button>
+                </div>
+
+                <div class="review-list">
+                    <div class="review">
+                        <div class="review-header">
+                            <div class="review-stars">★★★★★</div>
+                            <h3>Perfect for challenging trails</h3>
+                        </div>
+                        <div class="reviewer">
+                            <p>By Michael T. on March 12, 2025</p>
+                            <p>Verified Purchase</p>
+                        </div>
+                        <div class="review-content">
+                            <p>I've taken these boots on multiple hikes in the Rockies, and they've performed exceptionally well. The grip is outstanding on both wet and dry surfaces, and my feet stayed completely dry through several stream crossings. The ankle support is just right—supportive without being restrictive. After breaking them in for about a week, they've become incredibly comfortable for all-day wear.</p>
+                        </div>
+                    </div>
+
+                    <div class="review">
+                        <div class="review-header">
+                            <div class="review-stars">★★★★★</div>
+                            <h3>Durable and comfortable</h3>
+                        </div>
+                        <div class="reviewer">
+                            <p>By Sarah J. on February 28, 2025</p>
+                            <p>Verified Purchase</p>
+                        </div>
+                        <div class="review-content">
+                            <p>I've owned many hiking boots over the years, and these are by far the most comfortable straight out of the box. I was able to wear them on a 10-mile hike with minimal break-in time. The waterproofing is effective, and the boots provide excellent ankle support on uneven terrain. Highly recommend!</p>
+                        </div>
+                    </div>
+
+                    <div class="review">
+                        <div class="review-header">
+                            <div class="review-stars">★★★★☆</div>
+                            <h3>Good boots, slightly narrow fit</h3>
+                        </div>
+                        <div class="reviewer">
+                            <p>By Alex P. on February 15, 2025</p>
+                            <p>Verified Purchase</p>
+                        </div>
+                        <div class="review-content">
+                            <p>These boots have excellent traction and waterproofing. I've used them in various conditions, and they've held up well. My only complaint is that they run slightly narrow in the toe box. If you have wider feet, you might want to size up. Overall, they're still great boots with solid construction and good support.</p>
+                        </div>
+                    </div>
+
+                    <div class="load-more">
+                        <button class="load-more-btn">Load More Reviews</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <h2>You May Also Like</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="img/c.jpg" alt="Running Shoes">
+                    <h3>Ultra Boost Running Shoes</h3>
+                    <p>$129.99</p>
+                    <a href="product1.html">View Details</a>
+                </div>
+                <div class="product">
+                    <img src="img/f.jpg" alt="Casual Sneakers">
+                    <h3>Classic Canvas Sneakers</h3>
+                    <p>$59.99</p>
+                    <a href="product2.html">View Details</a>
+                </div>
+                <div class="product">
+                    <img src="img/g.jfif" alt="Formal Shoes">
+                    <h3>Leather Oxford Dress Shoes</h3>
+                    <p>$149.99</p>
+                    <a href="product3.html">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="men.html">Men's Shoes</a></li>
+                    <li><a href="women.html">Women's Shoes</a></li>
+                    <li><a href="kids.html">Kids' Shoes</a></li>
+                    <li><a href="sale.html">Sale Items</a></li>
+                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="shipping.html">Shipping Policy</a></li>
+                    <li><a href="returns.html">Returns & Exchanges</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/ninaysabelle.delossantos">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SoleStyle. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    
+        <script src="cart.js"></script>
+</body>
+</html>
